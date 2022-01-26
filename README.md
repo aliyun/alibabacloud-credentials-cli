@@ -1,5 +1,8 @@
 # Alibaba Cloud Credentials CLI
 
+[![Node.js CI](https://github.com/aliyun/alibabacloud-credentials-cli/actions/workflows/node.js.yml/badge.svg)](https://github.com/aliyun/alibabacloud-credentials-cli/actions/workflows/node.js.yml)
+
+
 ## Installation
 
 Install it via NPM.
