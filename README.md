@@ -1,7 +1,7 @@
 # Alibaba Cloud Credentials CLI
 
 [![Node.js CI](https://github.com/aliyun/alibabacloud-credentials-cli/actions/workflows/node.js.yml/badge.svg)](https://github.com/aliyun/alibabacloud-credentials-cli/actions/workflows/node.js.yml)
-
+[![codecov](https://codecov.io/gh/aliyun/alibabacloud-credentials-cli/branch/master/graph/badge.svg?token=HNU0V3KSRJ)](https://codecov.io/gh/aliyun/alibabacloud-credentials-cli)
 
 ## Installation
 
