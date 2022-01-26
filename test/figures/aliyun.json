@@ -1,0 +1,39 @@
+{
+    "current": "current",
+    "profiles": [
+        {
+            "name": "ramrolearn",
+            "mode": "RamRoleArn",
+            "access_key_id": "akid",
+            "access_key_secret": "aksecret",
+            "ram_role_arn": "ram_role_arn"
+        },
+        {
+            "name": "current",
+            "mode": "AK",
+            "access_key_id": "akid",
+            "access_key_secret": "aksecret"
+        },
+        {
+            "name": "external",
+            "mode": "External",
+            "process_command": "node test.js"
+        },
+        {
+            "name": "uri",
+            "mode": "CredentialsURI",
+            "credentials_uri": "https://localhost:7878/"
+        },
+        {
+            "name": "chainable",
+            "mode": "ChainableRamRoleArn",
+            "source_profile": "external",
+            "ram_role_arn": "ram_role_arn"
+        },
+        {
+            "name":"ecs_ram_role",
+            "mode": "EcsRamRole",
+            "ram_role_name": "rolename"
+        }
+    ]
+}

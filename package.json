@@ -1,0 +1,32 @@
+{
+  "name": "@alicloud/acc",
+  "version": "1.0.0",
+  "description": "Alibaba Cloud Credentials CLI",
+  "bin": {
+    "acc": "bin/acc.js"
+  },
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha -R spec test/*.test.js",
+    "test-cov": "nyc -r html npm run test",
+    "lint": "eslint --fix bin/*.js commands/*.js lib/*.js test/*.js"
+  },
+  "author": "Jackson Tian",
+  "license": "Apache License 2.0",
+  "dependencies": {
+    "@alicloud/credentials": "^2.2.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.7.0",
+    "mocha": "^9.1.3",
+    "nyc": "^15.1.0"
+  },
+  "files": [
+    "bin",
+    "commands",
+    "lib"
+  ]
+}
