@@ -45,6 +45,10 @@ module.exports = class {
 
   async run(argv) {
     const config = await loadConfig();
+    if (!config) {
+      console.log('No any profiles.');
+    }
+
     display(config);
   }
 };

@@ -209,6 +209,11 @@ module.exports = class {
     const { full, short, rest } = parse(argv);
     const parsed = this.validOptions(full, short);
     const config = await loadConfig();
+    if (!config) {
+      console.error(`No any configurations.`);
+      process.exit(1);
+    }
+
     let profile;
     if (parsed.has('profile')) {
       const profileName = parsed.get('profile');
