@@ -47,6 +47,7 @@ module.exports = class {
     const config = await loadConfig();
     if (!config) {
       console.log('No any profiles.');
+      return;
     }
 
     display(config);
