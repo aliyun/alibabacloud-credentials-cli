@@ -246,6 +246,7 @@ module.exports = class {
           ...credential.toEnv()
         },
         cwd: process.cwd(),
+        shell: true, // add it for Windows
         stdio: 'inherit'
       });
       const code = await onExit(child);
