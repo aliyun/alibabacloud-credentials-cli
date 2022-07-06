@@ -188,4 +188,30 @@ export ALICLOUD_ACCESS_KEY_SECRET=aksecret\n`);
     assert.deepStrictEqual(stdout, ``);
     assert.deepStrictEqual(code, 1);
   });
+
+  it('acc run -- with script', async function () {
+    this.timeout(10000);
+    const { code } = await spawn('node', ['../bin/acc.js', 'run', '--', 'npm', '-v'], {
+      cwd: __dirname,
+      env: {
+        ...process.env,
+        'ALIBABACLOUD_CONFIG': path.join(__dirname, 'figures/aliyun.json')
+      }
+    });
+    // assert.deepStrictEqual(stderr, ``);
+    assert.deepStrictEqual(code, 0);
+  });
+
+  it('acc run -- with binary', async function () {
+    const {code, stdout, stderr} = await spawn('node', ['../bin/acc.js', 'run', '--', 'node', '-v'], {
+      cwd: __dirname,
+      env: {
+        ...process.env,
+        'ALIBABACLOUD_CONFIG': path.join(__dirname, 'figures/aliyun.json')
+      }
+    });
+    assert.deepStrictEqual(stderr, ``);
+    assert.ok(stdout.startsWith(process.version));
+    assert.deepStrictEqual(code, 0);
+  });
 });
