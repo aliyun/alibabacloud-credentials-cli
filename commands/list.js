@@ -29,7 +29,7 @@ function display(config) {
   }, 0);
 
   console.log(` # | ${'Profile'.padEnd(maxNameLength, ' ')} | Credential `);
-  console.log(`---|${'-'.padEnd(maxNameLength + 2, '-')}|----------`);
+  console.log(`---|${'-'.repeat(maxNameLength + 2)}|----------`);
   for (const d of config.profiles) {
     console.log(` ${d.name === config.current ? '*' : ' '} | ${d.name.padEnd(maxNameLength, ' ')} | ${getDetail(d)}`);
   }

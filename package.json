@@ -17,7 +17,7 @@
   "author": "Jackson Tian",
   "license": "Apache License 2.0",
   "dependencies": {
-    "@alicloud/credentials": "^2.2.0"
+    "@alicloud/credentials": "^2.2.5"
   },
   "devDependencies": {
     "eslint": "^8.7.0",
