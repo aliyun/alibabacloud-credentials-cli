@@ -20,7 +20,7 @@
     "@alicloud/credentials": "^2.2.5"
   },
   "devDependencies": {
-    "eslint": "^8.7.0",
+    "eslint": "^9.2.0",
     "mocha": "^10.0.0",
     "nyc": "^15.1.0"
   },
