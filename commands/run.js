@@ -253,13 +253,21 @@ module.exports = class {
       process.exit(code);
     } else {
       console.log(`export ALIBABACLOUD_ACCESS_KEY_ID=${credential.getAccessKeyId()}`);
+      console.log(`export ALIBABA_CLOUD_ACCESS_KEY_ID=${credential.getAccessKeyId()}`);
       console.log(`export ALICLOUD_ACCESS_KEY_ID=${credential.getAccessKeyId()}`);
       console.log(`export ALIBABACLOUD_ACCESS_KEY_SECRET=${credential.getAccessKeySecret()}`);
+      console.log(`export ALIBABA_CLOUD_ACCESS_KEY_SECRET=${credential.getAccessKeySecret()}`);
       console.log(`export ALICLOUD_ACCESS_KEY_SECRET=${credential.getAccessKeySecret()}`);
       if (credential.getSecurityToken()) {
         console.log(`export ALIBABACLOUD_SECURITY_TOKEN=${credential.getSecurityToken()}`);
+        console.log(`export ALIBABA_CLOUD_SECURITY_TOKEN=${credential.getSecurityToken()}`);
         console.log(`export ALICLOUD_SECURITY_TOKEN=${credential.getSecurityToken()}`);
         console.log(`export SECURITY_TOKEN=${credential.getSecurityToken()}`);
+      } else {
+        console.log(`unset ALIBABACLOUD_SECURITY_TOKEN`);
+        console.log(`unset ALIBABA_CLOUD_SECURITY_TOKEN`);
+        console.log(`unset ALICLOUD_SECURITY_TOKEN`);
+        console.log(`unset SECURITY_TOKEN`);
       }
     }
   }

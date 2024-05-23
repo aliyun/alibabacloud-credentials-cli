@@ -144,9 +144,15 @@ run
     });
     assert.deepStrictEqual(stderr, '');
     assert.deepStrictEqual(stdout, `export ALIBABACLOUD_ACCESS_KEY_ID=akid
+export ALIBABA_CLOUD_ACCESS_KEY_ID=akid
 export ALICLOUD_ACCESS_KEY_ID=akid
 export ALIBABACLOUD_ACCESS_KEY_SECRET=aksecret
-export ALICLOUD_ACCESS_KEY_SECRET=aksecret\n`);
+export ALIBABA_CLOUD_ACCESS_KEY_SECRET=aksecret
+export ALICLOUD_ACCESS_KEY_SECRET=aksecret
+unset ALIBABACLOUD_SECURITY_TOKEN
+unset ALIBABA_CLOUD_SECURITY_TOKEN
+unset ALICLOUD_SECURITY_TOKEN
+unset SECURITY_TOKEN\n`);
     assert.deepStrictEqual(code, 0);
   });
 
