@@ -57,8 +57,10 @@ default mode:
 ```sh
 $ acc run --profile default
 export ALIBABACLOUD_ACCESS_KEY_ID=akid
+export ALIBABA_CLOUD_ACCESS_KEY_ID=akid
 export ALICLOUD_ACCESS_KEY_ID=akid
 export ALIBABACLOUD_ACCESS_KEY_SECRET=aksecret
+export ALIBABA_CLOUD_ACCESS_KEY_SECRET=aksecret
 export ALICLOUD_ACCESS_KEY_SECRET=aksecret
 ```
 
@@ -85,7 +87,7 @@ $ acc run --profile default -- aliyun sts GetCallerIdentity
 
 ACC use `--` to split `acc run` and real command. `acc run` will get AK/STS with specify profile name, and set it
 into environment variables, then spawn `aliyun sts GetCallerIdentity` command. If real command can consume the three
-environment variables(`ALIBABACLOUD_ACCESS_KEY_ID`, `ALIBABACLOUD_ACCESS_KEY_SECRET`, `ALIBABACLOUD_SECURITY_TOKEN`),
+environment variables(`ALIBABA_CLOUD_ACCESS_KEY_ID`, `ALIBABA_CLOUD_ACCESS_KEY_SECRET`, `ALIBABA_CLOUD_SECURITY_TOKEN`),
 it can be composed to use.
 
 ## License
