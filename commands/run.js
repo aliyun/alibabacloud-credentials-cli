@@ -152,6 +152,8 @@ async function getCredential(profile, parent) {
       return new CredentialModel(response['access_key_id'], response['access_key_secret']);
     } else if (response.mode === 'STS') {
       return new CredentialModel(response['access_key_id'], response['access_key_secret'], response['security_token']);
+    } else if (response.mode === 'StsToken') {
+      return new CredentialModel(response['access_key_id'], response['access_key_secret'], response['sts_token']);
     }
     break;
   }
